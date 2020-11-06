@@ -13,6 +13,8 @@ const puppeteer = require('puppeteer');
 
     // Takes a screenshot of the whole viewport
     await page.screenshot({ path: 'screenshot.png' });
+
+    //await page.screenshot({ path: '<folderpath>\screenshot'+ <scriptname> + <currenttime>'.png' });
     
     /* 
     // Take a screenshot with coustom viewport

@@ -17,13 +17,24 @@ const puppeteer = require('puppeteer');
     //type userid
     await page.type("#email", "goldentouch.shreyata@gmail.com")
 
+
     // press tab key from keyborad to move to the cursor to password box
     await page.keyboard.press('Tab')
 
-    await page.waitFor(1000)
+    await page.waitFor(3000)
 
     // press Enter key to submit the form
     await page.keyboard.press('Enter', {delay: 50})
+
+    await page.type("#password", "123455");
+    
+    await page.keyboard.down()
+    
+
+    //await page.keyboard.press('Tab')
+    //await page.keyboard.press('Space')
+
+    //await page.keyboard.press('Space')
 
     await page.waitFor(3000)
 

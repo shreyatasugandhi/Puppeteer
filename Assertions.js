@@ -17,11 +17,14 @@ const expect = require('chai').expect;
     console.info(`The title is: ${title}`);    
 
     //assert title
-   expect(title).to.be.a("string", " BlazeDemo")
+    //expect(title).to.be.a("string", " BlazeDemo");
+    expect(title).to.include("BlazeDemo")
+   
     
    //assert url includes/contains text
    const url = await page.url()
    expect(url).to.include("blazedemo")
+   
 
    //assert text using contains
    var text = await page.$eval("h1", element=> element.textContent)
@@ -29,10 +32,11 @@ const expect = require('chai').expect;
 
     //Assert using equal
      await page.click("input[value='Find Flights']"); //Click on Fid filights button
-     await page.waitFor(1000);
+     await page.waitFor(2000);
      const numberOfButtons = await page.$$eval('input[value="Choose This Flight"]', element => element.length);
+     console.log(numberOfButtons);
      expect(numberOfButtons).to.equal(5)
-    
+         
     
     //close the browser
     await browser.close();

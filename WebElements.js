@@ -28,7 +28,7 @@ const puppeteer = require('puppeteer');
         document.querySelector(`select [value="Rome"]`).selected = true;
       });
 
-      
+            
     await page.waitFor(3000);
     
     //Click on Fid filights button

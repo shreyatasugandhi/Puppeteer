@@ -1,6 +1,4 @@
 const puppeteer = require('puppeteer');
-const expect = require('chai').expect;
-
 
 (async () => {
 
@@ -12,7 +10,7 @@ const expect = require('chai').expect;
 
     await page.waitFor(3000);    
         
-    // navigate to home page
+    // navigate to home pagenpm
     await page.click("a[href='home']");
     await page.waitFor(3000);
 
@@ -28,6 +26,7 @@ const expect = require('chai').expect;
     await page.reload({ waitUntil: ["networkidle0", "domcontentloaded"] });
     await page.waitFor(3000);
     
+
     //close the browser
     await browser.close();
 

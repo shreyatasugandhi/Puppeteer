@@ -13,6 +13,7 @@ const puppeteer = require('puppeteer');
 
     await page.pdf({path: 'Page.pdf', format: 'A4'});
 
+    
     //close the browser
     await browser.close();
 

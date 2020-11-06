@@ -21,8 +21,8 @@ const puppeteer = require('puppeteer');
 
     //move mouse at x-y co-ordinates
     await page.mouse.move(800, 150);
-    await page.mouse.up(800, 150);
-    await page.mouse.down(800, 150);
+    await page.mouse.up(800, 50);
+    await page.mouse.down(800, 250);
 
     await page.waitFor(3000)
 
@@ -34,9 +34,11 @@ const puppeteer = require('puppeteer');
 
     
     //mouse double click at x-y co-ordinates
-    await page.mouse.click(30, 120, {clickCount: 2})
+    await page.mouse.click(700, 120, {clickCount: 2})
+    await page.waitFor(3000)
 
-    //mouse wheel or scroll
+
+    //App changed
     await page.goto('https://jqueryui.com/droppable/')
 
     await page.waitFor(3000)
@@ -50,11 +52,10 @@ const puppeteer = require('puppeteer');
     await page.mouse.wheel({ deltaY: -400})
     await page.waitFor(3000)
     await page.mouse.wheel({ deltaY: 400})
-    
     await page.waitFor(3000)
 
     
-    close the browser
+    //close the browser
     await browser.close();
 
 })();
